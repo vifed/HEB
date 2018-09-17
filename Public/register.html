@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Sharper Catania - Registrazione</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="Assets/css/register.css" rel="stylesheet">
+
+</head>
+<body class="sharper">
+    <div class="event_page_register" typeof="Event">
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div onclick="window.location='http://www.sharper-night.it/'" class="event_organizer">
+                        <b id="orgev">Sharper</b> Notte Europea dei Ricercatori
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="row titolo">
+                    <div class="row">
+                        <div class="col col-md-11">
+                        <span id="logo" property="logo" content="image" onclick="window.location.href='http://www.sharper-night.it/'" >
+                            <img src="Assets/img/logo-sharper.png">
+                        </span>
+                        <div class="col col-md-1" id="location">
+                        <span typeof="Place" onclick="window.location.href='http://www.sharper-night.it/sharper-catania/'">
+                            @<b  property="name">Catania</b>
+                            <meta property="address" content="Catania">
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="infoSharper mb-3 mt-5" style="display: block;">
+            <div class="row">
+                <div id="info" class="col-md-6">
+                    <div class="col-md-12 mt-4">
+                        <p> <b>SHARPER</b> è  un  progetto  nazionale  che  coinvolge  12  città:  Ancona,  Cagliari,  Caserta,
+                            Catania,  L’Aquila,  Macerata,  Napoli,  Nuoro,  Palermo,  Pavia,  Perugia  e  Trieste  dove  si
+                            svolgeranno attività a partire dal pomeriggio del 28 settembre fino a tarda notte ed è
+                            finanziato  dalla  Commissione  Europea  nel  quadro  delle  Azioni  Marie  Skłodowska-Curie
+                            del programma Horizon 2020.<br>
+                            <small>SHARPER is a European Researchers’ Night Project funded by the European Commission
+                                under the Marie Skłodowska-Curie actions (GA 818977).</small>
+                            </p>
+                        <h6>A Catania SHARPER è coordinato dai Laboratori Nazionali del Sud dell’INFN in uno sforzo congiunto con l’Università degli Studi di Catania in collaborazione con tutte le principali istituzioni di ricerca della città e con le associazioni e realtà culturali del territorio.
+                            Il 28 settembre 2018 il centro di Catania e i laboratori di ricerca della città, i luoghi storici e gli spazi di vita quotidiana torneranno ad ospitare laboratori, spettacoli, talk e attività pensate e realizzate per un pubblico di tutte le età.
+                            <br>A seguire troverai gli eventi ai quali potersi iscrivere!
+                        </h6>
+                        <a href="http://www.sharper-night.it/wp-content/uploads/2018/09/SHARPER_Catania-2018-v1.pdf">Clicca qui per consultare il programma completo!</a>
+                    </div>
+                    <div class="infoContact row">
+                        <p>Info: <br><br></p>&nbsp;
+                        <p>catania@sharper-night.it - Tel.: 095 542 285 <br>
+                            Tel.: 3511904802 - <a href="http://www.sharper-night.it/">www.sharper-night.eu</a> </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="Assets/img/sharper.png">
+                </div>
+            </div>
+        </section>
+        <section id="register_event" class="container" style="display: none">
+            <div class="col titlereg">
+                <h1>Registrati</h1>
+            </div>
+            <div class="row regEventBody">
+                <div class="col-md-8 event_registration_form">
+                    <form method="post" action="/sendBooking" accept-charset="UTF-8" id="register_form">
+                        <fieldset>
+                        <h3>Inserisci i tuoi dati:</h3>
+                        <h6><b style="color: black;">*</b>Tutti i campi sono obbligatori</h6>
+                        <div class="row">
+                            <div class="nomeUser">
+                                <div class="form-group">
+                                    <label for="nome">Nome <b style="color: black;">*</b></label><br>
+                                    <input required="required" class="form-control" name="nome" id="nome" type="text">
+                                </div>
+                            </div>&nbsp;
+                            <div class="cognomeUser">
+                                <div class="form-group">
+                                    <label for="cognome">Cognome <b style="color: black;">*</b></label><br>
+                                    <input required="required" class="form-control" name="cognome" id="cognome" type="text">
+                                </div>
+                            </div>&nbsp;
+                        </div>
+                        <div class="row">
+                            <div class="emaiUser">
+                                <div class="form-group">
+                                    <label for="mail">Email <b style="color: black;">*</b></label><br>
+                                    <input required="required" class="form-control" name="mail" id="mail" type="email">
+                                </div>
+                            </div>&nbsp;
+                            <div class="telefonoUser">
+                                <div class="form-group">
+                                    <label for="telefono">Telefono <b style="color: black;">*</b></label><br>
+                                    <input required="required" class="form-control" name="telefono" id="telefono" type="number">
+                                </div>
+                            </div>&nbsp;
+                        </div>
+                        <div class="row addPerson"></div>
+                        <div class="col-md-12 checkOption">
+                            <input onclick="newPerson()" style="margin-right: auto" type="checkbox" id="minorenne" name="minorenne" value="minorenne"/><b>Sei minorenne ?</b><br>
+                        </div>&nbsp;
+                        <div class="col-md-12">
+                        <button id="back_btn" class="btn btn-info" onclick="window.location.href='/register.html'">Indietro</button>
+                        <button id="register_btn" class="btn btn-success" value="Registrati" type="submit">Registrati</button>
+                        </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md-12 eventPanel">
+                        <div class="row panel-heading">
+                            <h3 class="panel_title">Evento selezionato:</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="eventSelected ">
+                                <div class="row">
+                                    <span class="headerSpan">Data: </span>&nbsp;
+                                    <span class="DataSelected"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="headerSpan">Ora: </span>&nbsp;
+                                    <span class="OraSelected"></span>
+                                </div>
+                                <div class="row">&nbsp;
+                                    <span class="headerSpan">Evento: </span>
+                                    <span class="NomeSelected"></span>
+                                </div>&nbsp;
+                                <div class="row">
+                                    <span class="headerSpan" >Luogo: </span>
+                                    <span class="LuogoSelected"></span>
+                                </div>&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="detailsEvent" style="display: block; background-color: transparent; box-shadow: none">
+        </section>
+        <section style="display: block">
+            <div class="col-md-9 partners">
+                <div class="partnersTitle">
+                    <p>I partner di Sharper Catania:</p>
+                </div>
+                <div class="row">
+                    <a href="http://www.lns.infn.it/">&nbsp;
+                      <img class="partnersimg" src="PartnersLogo/LNS_INFN.jpg">
+                    </a>
+                    <a href="http://www.unict.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/UNICT.jpg">
+                    </a>
+                    <a href="http://www.scuolasuperiorecatania.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/logo-scuola-superiore-catania.jpg">
+                    </a>
+                    <a href="http://www.oact.inaf.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/inaf-catania.jpg">
+                    </a>
+                    <a href="http://www.oact.inaf.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/OAC.jpg">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="http://www.ct.infn.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/infn-ct-ok.jpg">
+                    </a>
+                    <a href="http://www.ingv.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/ingvok-last.jpg">
+                    </a>
+                    <a href="http://www.dfa.unict.it/csfnsm">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/CSFNSM.jpg">
+                    </a>
+                    <a href="https://www.imm.cnr.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/CIMM.jpg">
+                    </a>
+                    <a href="http://www2.dfa.unict.it/laureescientifichecatania/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/pianolsct-ok.jpg">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="http://iplab.dmi.unict.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/ip-lab-ok.jpg">
+                    </a>
+                    <a href="http://www.circumetnea.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/fce-ok.jpg">
+                    </a>
+                    <a href="http://www.officineculturali.net/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/officine-culturali.jpg">
+                    </a>
+                    <a href="http://www.radiozammu.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/zammu-ok.jpg">
+                    </a>
+                    <a href="http://www.epsyoungminds.org/category/sections/catania-ym-section/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/EPS_CT_youngminds.jpg">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="http://www.addiopizzo.org/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/addio-pizzo-ok.jpg">
+                    </a>
+                    <a href="http://www.etnascacchi.com/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/CENTRO-SCACCHI.jpg">
+                    </a>
+                    <a href="http://www.titania.ct.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/Titania_judo.jpg">
+                    </a>
+                    <a href="https://www.kidstrip.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/KidsTipCantania3.png">
+                    </a>
+                    <a href="http://www.zammumultimedia.it/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/ZammùTv.jpg">
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="https://www.comune.catania.it/la-citta/culture/monumenti-e-siti-archeologici/musei/museo-civico-castello-ursino/">&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/CastelloUrsino_Ok.jpg">
+                    </a>
+                    <a>&nbsp;
+                        <img class="partnersimg" src="PartnersLogo/DojoKarate_Do.jpg">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div onclick="window.location.href='http://www.unict.it/'" class="endtitle">
+                        Evento offerto da <b>Università di Catania</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="http://cdn.syncfusion.com/js/assets/external/jquery.validate.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+    <script src="Assets/js/register.js"></script>
+</body>
+</html>

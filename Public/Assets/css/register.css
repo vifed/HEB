@@ -1,0 +1,373 @@
+body,html{
+    max-height: 1024px;
+    height: auto;
+}
+
+.event_page_register {
+    height: 100%;
+    background: url('../../PartnersLogo/catania.jpg') no-repeat fixed center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.event_organizer{
+    margin-left: auto;
+    margin-right: auto;
+    color: #171a1d;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.event_organizer:hover{
+    color: white;
+    opacity: 1;
+}
+
+.endtitle{
+    margin: 200% auto 0;
+    color: #171a1d;
+    text-align: center;
+    opacity: 0.5;
+}
+.endtitle:hover{
+    color: white;
+    opacity: 1;
+}
+
+.titolo{
+    text-align: center;
+    margin-left: 30%;
+    color: #060a1d;
+    margin-top: 2%;
+}
+
+.event_venue{
+    font-size: xx-large;
+    font-family: Arial-Black, serif;
+}
+
+#location{
+    font-size: xx-large;
+    margin-top: -10%;
+    margin-left: 110%;
+    margin-right: auto;
+}
+
+#location:hover{
+    color: white;
+    opacity: 0.7;
+}
+
+#register_event{
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: 20%;
+    width: 65%;
+    background-color: rgba(82, 85, 100, 0.8);
+    -moz-box-shadow:  10px  10px 5px #d2d8ff;
+    -webkit-box-shadow:  10px  10px 5px #d2d8ff;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#d2d8ff', Direction=135, Strength=10);
+    box-shadow: 10px 10px 5px #d2d8ff;
+    color: black;
+    font-family: "Font Awesome 5 Free", serif;
+}
+
+.infoSharper{
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: 26%;
+    margin-bottom: 0;
+    width: 65%;
+    font-family: "Font Awesome 5 Free", serif;
+    font-size: small;
+    line-height: 1.2;
+}
+
+#info{
+    background-color: rgb(255, 204, 51);
+}
+
+.infoContact{
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: small;
+}
+
+.titlereg{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.event_registration_form{
+    max-width: 100%;
+    height: 65%;
+    width: 65%;
+    display: block;
+}
+
+.event_registration_form h3 {
+    text-align: left;
+    font-size: 170%;
+}
+
+.event_registration_form h6 {
+    text-align: left;
+    font-size: small;
+}
+
+.event_registration_form label{
+    font-size: large;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.event_registration_form input{
+    font-size: large;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.checkOption{
+    margin-left: -10%;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+input[type=number] {
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+}
+.addPerson input{
+    font-size: large;
+    margin-left: 15%;
+    margin-right: auto;
+    margin-top: 1%;
+}
+.addPerson label{
+    font-size: large;
+    margin-left: 15%;
+    margin-right: auto;
+    margin-top: 1%;
+}
+.addPerson h3{
+    text-align: left;
+    font-size: 170%;
+}
+
+#register_btn{
+    margin: 1% auto 3% 0;
+}
+
+#back_btn{
+    margin: 1% auto 3% 0;
+}
+
+.panel_title{
+    font-family: "Font Awesome 5 Free", serif;
+    text-align: left;
+    margin-left: -25%;
+    font-size: 170%;
+}
+.headerSpan{
+    color: black;
+    margin-left: -15%;
+}
+
+.eventSelected span{
+    font-family: "Font Awesome 5 Free", serif;
+
+}
+.DataSelected{
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 105%;
+    color: #d2d8ff;
+}
+.NomeSelected{
+    margin-top: 2%;
+    font-size: 105%;
+    color: #d2d8ff;
+}
+.OraSelected{
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 105%;
+    color: #d2d8ff;
+}
+.LuogoSelected{
+    margin-top: 2%;
+    font-size: 105%;
+    color: #d2d8ff;
+}
+
+.headerSpan{
+    color: black;
+    font-size: 135%;
+}
+
+.partners{
+    height: 65%;
+    width: 65%;
+    margin: 10% 15% -95% 20%;
+}
+
+.partnersimg{
+    margin: 2% 15% 5% 25%;
+    width: 150px;
+    height: 75px;
+}
+
+
+.partnersTitle p{
+    margin-left: 3%;
+    margin-right: 50%;
+    font-size: xx-large;
+    color: #060a1d;
+    text-align: left;
+    background-color: #d2d8ff;
+
+}
+
+.detailsEvent{
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: 14%;
+    width: 75%;
+    background-color: rgba(28, 40, 51, 0.9);
+    -moz-box-shadow:  10px  10px 5px #d2d8ff;
+    -webkit-box-shadow:  10px  10px 5px #d2d8ff;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#d2d8ff', Direction=135, Strength=10);
+    box-shadow: 10px 10px 5px #d2d8ff;
+    color: #4B6A88;
+    font-family: "Font Awesome 5 Free", serif;
+}
+
+.detailsEvent button{
+    margin-left: -50%;
+    margin-bottom: 5%;
+}
+
+.head_details{
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: x-large;
+}
+
+
+.description_event{
+    float: left;
+    margin-left: 5%;
+    width: 65%;
+    font-family: "Font Awesome 5 Free", serif;
+    color:  #00BFFF;
+
+}
+.description_event b{
+    color: #4183D7;
+
+}
+
+.description_event h4 {
+    margin-left: 5%;
+    font-size: x-large;
+    text-align: left;
+    margin-right: auto;
+    color: #34B9DB;
+}
+.description_event blockquote{
+    border-radius: 5px;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    background-color: rgba(82, 85, 90, 0.5);
+
+}
+
+.event_poster{
+    margin-top: 15%;
+    margin-right: 20%;
+    border-color: transparent;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(149, 179, 231   0.5);
+}
+
+.event_title {
+    text-align: -webkit-left;
+    text-align: -moz-left;
+    font-size: xx-large;
+    margin-left: 4%;
+    color: #1978D4;
+}
+
+.registerBtn{
+    margin-left: 82%;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+
+.sched{
+    font-family: "Font Awesome 5 Free", serif;
+    font-size: xx-large;
+    color: #060a1d;
+}
+.data_Evento{
+    text-align: right;
+    margin-left: 150%;
+    font-family: "Font Awesome 5 Free", serif;
+    font-size: x-large;
+    color: #1E90FF;
+}
+
+.sched{
+    font-size: large;
+    color: #1978D4;
+}
+
+#done{
+    font-family: "Font Awesome 5 Free", serif;
+    background-color: #FFFFFF;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 18%;
+}
+
+#footer-done img{
+    width: 250px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+#footer-done{
+    margin-bottom: 5%;
+    margin-top: 10%;
+    margin-left: 35%;
+}
+
+#title-done{
+    text-align: center;
+    vertical-align: top;
+    direction: ltr;
+    padding: 20px 20px;
+    width: 100%;
+    color: white;
+    font-size: 150%;
+    background-color: #4caf50;
+}
+
+#body-done h2{
+    text-align: left;
+    text-align: -webkit-left;
+    margin-left: 10%;
+    font-size: xx-large;
+}
+#body-done > p{
+    text-align: left;
+    margin-left: 12%;
+    font-size: large;
+}

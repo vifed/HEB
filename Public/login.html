@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login to HEB - Handle Events and Booking</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/login.css">
+</head>
+<body>
+    <div class="container" style="margin: 0 auto">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                    <div class="modal-header">
+                        <a class="form-logo"><img src="Assets/img/logo.png" class="img-fluid"></a>
+                    </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form id="login-form" >
+                        <div class="form-group ">
+                            <label for="email">Email*</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required="required" value="">
+                            <div class="invalid-feedback d-none" id="choose-email">
+                                Inserisci email.
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                                <label for="pass">Password*</label>
+                                <input type="password" class="form-control" id="pass" placeholder="Password" required="required" value="">
+                                <div class="invalid-feedback d-none" id="choose-password">
+                                    Inserisci password.
+                                </div>
+                            </div>
+                        <div>
+                            <a class="d-block small" href="reset-password.html">Password dimenticata?</a>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" value="Submit" id="login-btn">Login</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="Assets/js/checkLogin.js"></script>
+</body>
+</html>

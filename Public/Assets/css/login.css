@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+html,body{
+    padding-top: 10px;
+    background-color: #212529;
+}
+
+.form-logo{
+    margin: 0 auto;
+}
+
+.modal-content{
+    background: #ecf0f1;
+    border-radius: 1.02em;
+    border: none;
+    box-shadow: 0 1px 1px rgba(0,0,150,0.5), inset 0 0 8px rgba(17, 24, 31, 0.9);
+}
+
+.modal-header{
+    border-bottom-color: #6c757d;
+}
+
+.modal-footer{
+    border-top-color: transparent;
+}
+.modal-body{
+    border-top-color: transparent;
+}
+
+#res-body{
+    background: #ecf0f1;
+    border-radius: 1.02em;
+    border: none;
+    box-shadow: 0 1px 1px rgba(0,0,150,0.5), inset 0 0 8px rgba(17, 24, 31, 0.9);
+}

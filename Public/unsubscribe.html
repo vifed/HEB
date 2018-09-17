@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cancella prenotazione</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="Assets/css/register.css" rel="stylesheet">
+    <style>
+        body{
+            font-family: "Font Awesome 5 Free", serif;
+            background: #F0F0F0
+        }
+        #title-done{
+            background: darkred;
+        }
+        #inputval{
+            margin-left: 25%;
+            font-size: large;
+        }
+        #delbtn{
+            margin-top: 5%;
+        }
+        #body-done p{
+            margin-left: 5%;
+        }
+        .ev{
+            margin-left: -1%;
+        }
+        .etichetta{
+            margin-left: -2%;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-8" id="done">
+        <div class="row" >
+            <div class="col-md-12" id="title-done">
+                <span>Cancella prenotazione</span>
+            </div>
+        </div>&nbsp;
+        <div class="row">
+            <div id="body-done">
+                <p>Inserisci l'indirizzo email che hai usato per la regitrazione e seleziona l'evento per il quale desideri cancellare la prenotazione.</p>&nbsp;
+                <div class="col-md-12" id="inputval">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <label for="mail">Email:</label><br>
+                            <input required="required" class="form-control" name="mail" id="mail" type="email" onblur="checkMail()">
+                            <div class="invalid-feedback d-none" id="notvalidmail"></div>
+                        </div>
+                    </div>&nbsp;
+                    <div class="col-md-12 ev">
+                        <div class="col-md-12">
+                            <label class="etichetta" for="eventop" >Evento:</label><br>
+                            <select class="row opzioni" required="required" id="eventop">
+                            </select>&nbsp;
+                        </div>
+                        <div class="col-md-12">
+                            <label class="etichetta" for="oraop">Ora:</label><br>
+                            <select class="row opzioniOra" required="required" id="oraop">
+                            </select>
+                        </div>
+                    </div>
+                    <div id="delbtn" class="col-md-1">
+                        <button type="button" class="btn btn-outline-danger" onclick="delBooking()">Cancella Prenotazione</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="footer-done" class="col-md-12" onclick="window.location='http://www.sharper-night.it/'">
+                <img class="img-thumbnail" src="Assets/img/logo-sharper.png" >
+            </div>
+        </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            getEventi();
+
+            $('.opzioni').change( function () {
+                var id = $(".opzioni option:selected").attr('id');
+                $(".ora"+id).prop('hidden', false).each(function () {
+                    $('.opzioniOra option').attr('hidden', true);
+                    $(".ora"+id).attr('hidden', false);
+                });
+            });
+
+
+        });
+        function getEventi() {
+            $.post('/eventiAttivi', function (res) {
+                var valori = JSON.parse(res);
+                var eventi = valori.Eventi;
+                var scheduling = valori.Scheduling;
+                addEventi(eventi, scheduling);
+            });
+
+        }
+        function addEventi(dati, sched) {
+            var html = '<option value="" selected disabled hidden>Scegli evento</option>';
+            $.each(dati, function (key, val) {
+                html += '<option id="'+val.ID+'"  >'+val.Nome+'</option>';
+                addScheduling(val.ID, sched);
+            });
+            $('.opzioni').html(html);
+        }
+        function addScheduling(id, sched) {
+            var x=0;
+            var html = '<option value="" selected disabled hidden>Scegli ora</option>';
+            $.each(sched, function (key, val) {
+                if(id === val.ID_Events) {
+                    html += '<option id="'+x+'" class="ora'+id+'" hidden>' + val.Ora_Inizio.substr(0, 5) + '</option>';
+                    x++;
+                }
+            });
+            $('.opzioniOra').append(html);
+        }
+
+        function checkMail() {
+            var usermail = $("#mail").val();
+            if (!usermail.length){
+                $("#mail").removeClass("is-valid").addClass("is-invalid");
+                $("#notvalidmail").removeClass("valid-feedback d-none").addClass("invalid-feedback d-block").text("Inserisci email!");
+            }
+            else{
+                $.post('/checkEmailLive', {mail:usermail},  function (res) {
+                    switch (res) {
+                        case "200":
+                            $("#mail").removeClass("is-invalid").addClass("is-valid");
+                            $("#notvalidmail").empty();
+                            break;
+                        case "404":
+                            $("#mail").removeClass("is-valid").addClass("is-invalid");
+                            $("#notvalidmail").removeClass("valid-feedback d-none").addClass("invalid-feedback d-block").text("Email non trovata. Ricontrollare!");
+                            break;
+                    }
+                })
+            }
+        }
+
+        function delBooking() {
+            var mail = $("#mail").val();
+            var Evento = $(".opzioni option:selected").text();
+            var Ora = $(".opzioniOra option:selected").text();
+            if (!mail || !Evento || !Ora){
+                $(this).removeClass("is-valid").addClass("is-invalid");
+                $(this).removeClass("valid-feedback d-none").addClass("invalid-feedback d-block").text("Tutti i campi sono obbligatori!");
+            }
+            else {
+                $.post('/deleteBooking', {email:mail, event:Evento, ora:Ora}, () =>{
+                    $(location).attr('href', '/Public/doneDelete.html');
+                });
+            }
+        }
+
+    </script>
+</body>
+</html>
