@@ -154,7 +154,7 @@
             }
             else {
                 $.post('/deleteBooking', {email:mail, event:Evento, ora:Ora}, () =>{
-                    $(location).attr('href', '/Public/doneDelete.html');
+                    $(location).attr('href', '/doneDelete.html');
                 });
             }
         }
