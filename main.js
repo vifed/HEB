@@ -126,7 +126,8 @@ app.get('/addEvento.html', (req, res) => {
         res.sendFile(__dirname + '/Private/addEvento.html');
     }
     else{
-        res.redirect(401, '/login.html');
+        res.sendFile(__dirname + '/Private/addEvento.html');
+        // res.redirect(401, '/login.html');
     }
 });
 
@@ -135,7 +136,8 @@ app.get('/admin.html', (req, res) => {
         res.sendFile(__dirname + '/Private/admin.html');
     }
     else{
-        res.redirect(401, '/login.html');
+        res.sendFile(__dirname + '/Private/admin.html');
+        // res.redirect(401, '/login.html');
     }
 });
 
@@ -144,7 +146,8 @@ app.get('/eventiAttivi.html', function (req, res) {
         res.sendFile(__dirname + '/Private/eventiAttivi.html');
     }
     else{
-        res.redirect(401, '/login.html');
+        res.sendFile(__dirname + '/Private/eventiAttivi.html');
+        // res.redirect(401, '/login.html');
     }
 });
 
@@ -153,7 +156,8 @@ app.get('/prenotazioni.html', function (req, res) {
         res.sendFile(__dirname + '/Private/prenotazioni.html');
     }
     else{
-        res.redirect(401, '/login.html');
+        res.sendFile(__dirname + '/Private/prenotazioni.html');
+        // res.redirect(401, '/login.html');
     }
 });
 

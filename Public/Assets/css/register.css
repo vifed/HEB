@@ -12,6 +12,10 @@ body,html{
     -o-background-size: cover;
 }
 
+#title-block{
+    margin-left: 25%;
+}
+
 .event_organizer{
     margin-left: auto;
     margin-right: auto;
@@ -51,7 +55,7 @@ body,html{
 #location{
     font-size: xx-large;
     margin-top: -10%;
-    margin-left: 110%;
+    margin-left: 95%;
     margin-right: auto;
 }
 
