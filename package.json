@@ -14,7 +14,7 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "http_request": "^0.1.2",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery.easing": "^1.4.1",
     "json": "^9.0.6",
     "jsonwebtoken": "^8.3.0",
